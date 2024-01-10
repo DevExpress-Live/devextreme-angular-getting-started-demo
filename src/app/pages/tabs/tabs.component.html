@@ -1,0 +1,44 @@
+<h2 class="content-block">Tabs</h2>
+<div class="content-block">
+    <div class="dx-card responsive-paddings">
+        <dx-tab-panel 
+            [animationEnabled]="true"
+            [loop]="true"
+            [swipeEnabled]="true"
+            [swipeEnabled]="true"
+            stylingMode="secondary"
+            tabsPosition="top"
+            iconPosition="top"
+        >
+            <dxi-item title="Employee" icon="floppy">
+                <div *dxTemplate>
+                    <dx-form id="form" [formData]="employeeData">
+                        <dxi-item dataField="name">
+                            <dxo-label template="Name"></dxo-label>
+                        </dxi-item>
+                        <dxi-item dataField="position">
+                            <dxo-label template="Position"></dxo-label>
+                        </dxi-item>
+                        <dxi-item dataField="hireDate">
+                            <dxo-label template="Hire Date"></dxo-label>
+                        </dxi-item>
+                        <dxi-item dataField="officeNumber">
+                            <dxo-label template="Office Number"></dxo-label>
+                        </dxi-item>
+                        <ng-container *ngFor="let label of labelTemplates">
+                            <div *dxTemplate="let data of label.name">
+                                <div><i class="dx-icon {{ label.icon }}"></i>{{ data.text }}</div>
+                            </div>
+                        </ng-container>
+                    </dx-form>
+                </div>
+            </dxi-item>
+            <dxi-item title="Notes" icon="comment" badge="update">
+                <p>{{employeeData.notes}}</p>
+            </dxi-item>
+            <dxi-item title="Role" icon="coffee" badge="new">
+                <p>{{employeeData.roles}}</p>
+            </dxi-item>
+        </dx-tab-panel>
+    </div>
+</div>
