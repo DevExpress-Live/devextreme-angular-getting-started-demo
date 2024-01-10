@@ -1,5 +1,9 @@
 # DevextremeAngularDemo
 
+### Created during the January 10, 2024, live stream.
+
+<hr>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
 
 ## Development server
