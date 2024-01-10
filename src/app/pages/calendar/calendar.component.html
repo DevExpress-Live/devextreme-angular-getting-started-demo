@@ -1,21 +1,23 @@
 <h2 class="content-block">Calendar</h2>
 <div class="content-block">
-    <div class="dx-card responsive-paddings">
-        <dx-calendar>
-            [value]='now'
-            [selectionMode]='multiple'
-        </dx-calendar>
+  <div class="dx-card responsive-paddings">
+    <dx-calendar
+      [value]="value"
+      [showWeekNumbers]="true"
+      [selectWeekOnClick]="true"
+      [selectionMode]="selectionMode"
+    ></dx-calendar>
 
-        <div class="date-range">
-            <dx-date-range-box 
-                [startDate]='startDate' 
-                [endDate]='endDate'
-                startDateLabel="Start"
-                endDateLabel="End"
-                labelMode="floating"
-                (onValueChanged)="onValueChanged($event)"
-            >
-            </dx-date-range-box>
-        </div>
+    <div class="date-range">
+      <dx-date-range-box
+        [startDate]="startDate"
+        [endDate]="endDate"
+        startDateLabel="Start"
+        endDateLabel="End"
+        labelMode="floating"
+        (onValueChanged)="onValueChanged($event)"
+      >
+      </dx-date-range-box>
     </div>
+  </div>
 </div>

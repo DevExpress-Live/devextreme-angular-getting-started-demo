@@ -1,13 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginFormComponent, ResetPasswordFormComponent, CreateAccountFormComponent, ChangePasswordFormComponent } from './shared/components';
+import {
+  LoginFormComponent,
+  ResetPasswordFormComponent,
+  CreateAccountFormComponent,
+  ChangePasswordFormComponent,
+} from './shared/components';
 import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 
-import { DxDataGridModule, DxFormModule, DxButtonModule, DxCalendarModule, DxDateRangeBoxModule, DxTabPanelModule, DxTemplateModule, DxFileManagerModule, DxPopupModule } from 'devextreme-angular';
+import {
+  DxDataGridModule,
+  DxFormModule,
+  DxButtonModule,
+  DxCalendarModule,
+  DxDateRangeBoxModule,
+  DxTabPanelModule,
+  DxTemplateModule,
+  DxFileManagerModule,
+  DxPopupModule,
+  DxSpeedDialActionModule,
+} from 'devextreme-angular';
 import { TabsComponent } from './pages/tabs/tabs.component';
 import { FilesComponent } from './pages/files/files.component';
 
@@ -15,61 +31,73 @@ const routes: Routes = [
   {
     path: 'pages/files',
     component: FilesComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'pages/tabs',
     component: TabsComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'pages/calendar',
     component: CalendarComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'tasks',
     component: TasksComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'profile',
     component: ProfileComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'home',
     component: HomeComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'login-form',
     component: LoginFormComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'reset-password',
     component: ResetPasswordFormComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'create-account',
     component: CreateAccountFormComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'change-password/:recoveryCode',
     component: ChangePasswordFormComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService],
   },
   {
     path: '**',
-    redirectTo: 'home'
-  }
+    redirectTo: 'home',
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true }), DxDataGridModule, DxFormModule, DxButtonModule, DxCalendarModule, DxDateRangeBoxModule, DxTabPanelModule, DxTemplateModule, DxFileManagerModule, DxPopupModule],
+  imports: [
+    RouterModule.forRoot(routes, { useHash: true }),
+    DxDataGridModule,
+    DxFormModule,
+    DxButtonModule,
+    DxCalendarModule,
+    DxDateRangeBoxModule,
+    DxTabPanelModule,
+    DxTemplateModule,
+    DxFileManagerModule,
+    DxPopupModule,
+    DxSpeedDialActionModule,
+  ],
   providers: [AuthGuardService],
   exports: [RouterModule],
   declarations: [
@@ -78,7 +106,7 @@ const routes: Routes = [
     TasksComponent,
     CalendarComponent,
     TabsComponent,
-    FilesComponent
-  ]
+    FilesComponent,
+  ],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

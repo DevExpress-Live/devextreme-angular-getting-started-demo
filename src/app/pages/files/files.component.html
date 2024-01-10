@@ -1,18 +1,38 @@
 <h2 class="content-block">Files</h2>
 <div class="content-block">
-    <div class="dx-card responsive-paddings">
-        <dx-file-manager id="fileManager" [fileSystemProvider]="remoteProvider" currentPath="Widescreen"
-            (onSelectedFileOpened)="displayImagePopup($event)">
-            <dxo-permissions [create]="true" [copy]="true" [move]="true" [delete]="true" [rename]="true" [upload]="true"
-                [download]="true">
-            </dxo-permissions>
-        </dx-file-manager>
+  <div class="dx-card responsive-paddings">
+    <dx-file-manager
+      id="fileManager"
+      [fileSystemProvider]="remoteProvider"
+      currentPath="Widescreen"
+      (onSelectedFileOpened)="displayImagePopup($event)"
+    >
+      <dxo-permissions
+        [create]="true"
+        [copy]="true"
+        [move]="true"
+        [delete]="true"
+        [rename]="true"
+        [upload]="true"
+        [download]="true"
+      >
+      </dxo-permissions>
+    </dx-file-manager>
 
-        <dx-popup id="photo-popup" maxHeight="600" [hideOnOutsideClick]="true" [(title)]="imageItemToDisplay.name"
-            [(visible)]="popupVisible" [showCloseButton]="true">
-            <div *dxTemplate="let data of 'content'" class="photo-popup-content">
-                <img src="{{ imageItemToDisplay.dataItem.url }}" class="photo-popup-image" />
-            </div>
-        </dx-popup>
-    </div>
+    <dx-popup
+      id="photo-popup"
+      maxHeight="600"
+      [hideOnOutsideClick]="true"
+      [(title)]="imageItemToDisplay.name"
+      [(visible)]="popupVisible"
+      [showCloseButton]="true"
+    >
+      <div *dxTemplate="let data of 'content'" class="photo-popup-content">
+        <img
+          src="{{ imageItemToDisplay.dataItem.url }}"
+          class="photo-popup-image"
+        />
+      </div>
+    </dx-popup>
+  </div>
 </div>

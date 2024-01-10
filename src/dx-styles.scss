@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0px;
   min-height: 100%;
   height: 100%;
@@ -31,7 +32,7 @@ html, body {
 }
 
 .side-nav-outer-toolbar .dx-drawer {
-  height: calc(100% - 56px)
+  height: calc(100% - 56px);
 }
 
 .content-block {
@@ -61,8 +62,10 @@ html, body {
   border-left: 0;
 }
 
-.with-footer > .dx-scrollable-wrapper >
-.dx-scrollable-container > .dx-scrollable-content {
+.with-footer
+  > .dx-scrollable-wrapper
+  > .dx-scrollable-container
+  > .dx-scrollable-content {
   height: 100%;
 
   & > .dx-scrollview-content {

@@ -2,7 +2,7 @@ export const navigation = [
   {
     text: 'Home',
     path: '/home',
-    icon: 'home'
+    icon: 'home',
   },
   {
     text: 'Examples',
@@ -11,29 +11,28 @@ export const navigation = [
       {
         text: 'Profile',
         path: '/profile',
-        icon: 'user'
+        icon: 'user',
       },
       {
         text: 'Tasks',
         path: '/tasks',
-        icon: 'fields'
+        icon: 'fields',
       },
       {
         text: 'Calendar',
         path: '/pages/calendar',
-        icon: 'event'
-      }
-    ]
+        icon: 'event',
+      },
+    ],
   },
   {
     text: 'Tabs',
     path: '/pages/tabs',
-    icon: 'folder'
+    icon: 'folder',
   },
   {
     text: 'Files',
     path: '/pages/files',
-    icon: 'file'
+    icon: 'file',
   },
-
 ];

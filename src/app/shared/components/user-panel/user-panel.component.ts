@@ -8,9 +8,8 @@ import { IUser } from '../../services/auth.service';
 @Component({
   selector: 'app-user-panel',
   templateUrl: 'user-panel.component.html',
-  styleUrls: ['./user-panel.component.scss']
+  styleUrls: ['./user-panel.component.scss'],
 })
-
 export class UserPanelComponent {
   @Input()
   menuItems: any;
@@ -25,12 +24,8 @@ export class UserPanelComponent {
 }
 
 @NgModule({
-  imports: [
-    DxListModule,
-    DxContextMenuModule,
-    CommonModule
-  ],
-  declarations: [ UserPanelComponent ],
-  exports: [ UserPanelComponent ]
+  imports: [DxListModule, DxContextMenuModule, CommonModule],
+  declarations: [UserPanelComponent],
+  exports: [UserPanelComponent],
 })
-export class UserPanelModule { }
+export class UserPanelModule {}
